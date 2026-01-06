@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle CSS Class Example</title>
+    <style>
+        .normal {
+            color: black;
+            background-color: white;
+            padding: 10px;
+            border: 2px solid gray;
+            text-align: center;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .highlight {
+            color: white;
+            background-color: darkblue;
+            border: 2px solid red;
+            font-weight: bold;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Toggle CSS Class Demo</h2>
+
+    <div id="myBox" class="normal">
+        Click the button to highlight me!
+    </div>
+
+    <button onclick="toggleHighlight()">Toggle Highlight</button>
+
+    <script>
+        // User-defined function
+        function toggleHighlight() {
+            // Select the element
+            let box = document.getElementById("myBox");
+            
+            // Toggle the CSS class 'highlight'
+            box.classList.toggle("highlight");
+        }
+    </script>
+
+</body>
+</html>

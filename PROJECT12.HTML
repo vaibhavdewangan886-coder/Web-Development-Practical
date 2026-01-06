@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Conditional & Loop with User Input</title>
+</head>
+<body>
+
+    <h2>Check Even/Odd and Print Numbers</h2>
+
+    <!-- User Input -->
+    <label>Enter a number: </label>
+    <input type="number" id="userNumber">
+    <button onclick="checkEvenOdd()">Check Even/Odd</button>
+    <button onclick="printNumbers()">Print Numbers Up To N</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Conditional statement
+        function checkEvenOdd() {
+            let num = Number(document.getElementById("userNumber").value);
+            if (num % 2 === 0) {
+                document.getElementById("output").innerText = num + " is Even";
+            } else {
+                document.getElementById("output").innerText = num + " is Odd";
+            }
+        }
+
+        // Looping statement
+        function printNumbers() {
+            let num = Number(document.getElementById("userNumber").value);
+            let text = "Numbers from 1 to " + num + ": ";
+            for (let i = 1; i <= num; i++) {
+                text += i + " ";
+            }
+            document.getElementById("output").innerText = text;
+        }
+    </script>
+
+</body>
+</html>
